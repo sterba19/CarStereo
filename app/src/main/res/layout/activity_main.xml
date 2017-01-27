@@ -17,7 +17,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="2">
+            android:weightSum="3
+            ">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -28,10 +29,16 @@
                 android:textColor="#efce10"
                 android:textSize="55dp" />
 
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/channelToggle"
+                android:layout_weight="1"/>
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="fill_parent"
                 android:layout_weight="1">
 
                 <Button
@@ -40,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:text="1"
                     android:id="@+id/Preset1"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="top"
                     android:layout_weight="1" />
 
                 <Button
@@ -49,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:text="2"
                     android:id="@+id/Preset"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="top|bottom"
                     android:layout_weight="1"/>
 
                 <Button
@@ -58,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text="3"
                     android:id="@+id/Preset3"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="top|bottom"
                     android:layout_weight="1"/>
 
                 <Button
@@ -67,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:text="4"
                     android:id="@+id/Preset4"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="top|bottom"
                     android:layout_weight="1"/>
 
                 <Button
@@ -76,8 +83,8 @@
                     android:layout_height="wrap_content"
                     android:text="5"
                     android:id="@+id/Preset5"
-                    android:layout_gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_gravity="top" />
 
                 <Button
                     style="?android:attr/buttonStyleSmall"
@@ -86,7 +93,7 @@
                     android:text="6"
                     android:id="@+id/Preset6"
                     android:layout_weight="1"
-                    android:layout_gravity="bottom" />
+                    android:layout_gravity="top" />
             </LinearLayout>
 
         </LinearLayout>
@@ -96,8 +103,63 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:background="#FF0000"
+        android:background="#363636"
         >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="New ToggleButton"
+                    android:id="@+id/PlayPause"
+                    android:textOn="PLAY"
+                    android:textOff="PAUSE"
+                    android:layout_weight="1"/>
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="New ToggleButton"
+                    android:id="@+id/STOP"
+                    android:textOn="PLAY"
+                    android:textOff="STOP"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="EJECT"
+                    android:id="@+id/EJECT"
+
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="POWER"
+                    android:id="@+id/PowerSwitch"
+                    android:textOn="ON"
+                    android:textOff="OFF" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
